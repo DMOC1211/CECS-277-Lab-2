@@ -35,9 +35,7 @@ def comp_weapon():
     return random.randint(1, 3)
 
 def find_winner(p_wep, c_wep): 
-    tie == 0
-    player_win == 1
-    computer_win == 2
+    ## tie = 0,  player_win = 1, computer_win = 2
     if p_wep = c_wep:
         return 0
     if p_wep = 1 and c_wep = 3:
@@ -56,7 +54,13 @@ def find_winner(p_wep, c_wep):
 
 
 def display_scores(p_scores, c_scores):
-    score = 0 
+    print("Player: "+ p_scores)
+    print('Computer: " + c_scores)
+        end
+
+
+
+score = 0 
     if find_winner == 1 
         score += 1
     if find_winner == 2 
@@ -83,6 +87,7 @@ def main():
                 break
         elif input == 2:
             print("test")
+            
         elif input == 3:
             playing = False
         else:
