@@ -41,17 +41,17 @@ def find_winner(p_wep, c_wep):
     ## tie = 0,  player_win = 1, computer_win = 2
     if p_wep = c_wep:
         return 0
-    if p_wep = 1 and c_wep = 3:
+    if p_wep == 1 and c_wep == 3:
         return 1
-    if p_wep = rock and c_wep = paper:
+    if p_wep == 1 and c_wep == 2 :
         return 2
-    if p_wep = scissors and c_wep = rock:
+    if p_wep == 3 and c_wep == 1 :
         return 2
-    if p_wep = scissors and c_wep = paper:
+    if p_wep == 3 and c_wep == 2:
         return 1
-    if p_wep = paper and c_wep = rock:
+    if p_wep == 2 and c_wep == 1:
         return 1
-    if p_wep = paper and c_wep = scissors:
+    if p_wep = 3 and c_wep == 2:
         return 2
 
 
