@@ -1,8 +1,8 @@
 
 #Lab 2: Functions
 
-#Authors: Jacob Miranda
-#Group 
+#Authors: Jacob Miranda & Daniel Puerto
+#Group: 11 
 #Date: 1/28/2026
 #Function: Allows the user to play Rock-Paper-Scissors (RPS) against a computer.
 #Takes the user's choice of "weapon" and pits it against the computer's random choice.
@@ -34,6 +34,33 @@ def weapon_menu():
 def comp_weapon():
     return random.randint(1, 3)
 
+def find_winner(p_wep, c_wep): 
+    if p_wep = c_wep:
+        return 'draw'
+    if p_wep = rock and c_wep = scissors:
+        return _ 
+    if p_wep = rock and c_wep = paper:
+        return _ 
+    if p_wep = scissors and c_wep = rock:
+        return _ 
+    if p_wep = scissors and c_wep = paper:
+        return _ 
+    if p_wep = paper and c_wep = rock:
+        return _ 
+    if p_wep = paper and c_wep = scissors:
+        return _ 
+
+
+
+def display_scores(p_scores, c_scores):
+    score = 0 
+    if find_winner = 1 
+        score += 1
+    if find_winner = 2 
+        score -= 1
+    if find_winner = 0 
+        return
+    
 def main():
     print("Welcome to Rock-Paper-Scissors!")
     playing = True
