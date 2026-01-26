@@ -35,30 +35,33 @@ def comp_weapon():
     return random.randint(1, 3)
 
 def find_winner(p_wep, c_wep): 
+    tie == 0
+    player_win == 1
+    computer_win == 2
     if p_wep = c_wep:
-        return 'draw'
-    if p_wep = rock and c_wep = scissors:
-        return _ 
+        return 0
+    if p_wep = 1 and c_wep = 3:
+        return 1
     if p_wep = rock and c_wep = paper:
-        return _ 
+        return 2
     if p_wep = scissors and c_wep = rock:
-        return _ 
+        return 2
     if p_wep = scissors and c_wep = paper:
-        return _ 
+        return 1
     if p_wep = paper and c_wep = rock:
-        return _ 
+        return 1
     if p_wep = paper and c_wep = scissors:
-        return _ 
+        return 2
 
 
 
 def display_scores(p_scores, c_scores):
     score = 0 
-    if find_winner = 1 
+    if find_winner == 1 
         score += 1
-    if find_winner = 2 
+    if find_winner == 2 
         score -= 1
-    if find_winner = 0 
+    if find_winner == 0 
         return
     
 def main():
