@@ -20,10 +20,13 @@ def weapon_menu():
 
     #For simplicity, 1 = Rock, 2 = Paper, 3 = Scissors
     if weapon_u == "R":
+        print("You chose Rock")
         return 1
     elif weapon_u == "P":
+        print("You chose Paper")
         return 2
     elif weapon_u == "S":
+        print("You chose Scissors")
         return 3
     elif weapon_u == "B":
         return 0
@@ -81,9 +84,7 @@ def main():
             user_weapon = weapon_menu()
             if user_weapon != 0:
                 computer_weapon = random.randint(1, 3)
-                weapons = {1: "Rock", 2: "Paper", 3: "Scissors"}
-                print(f"You chose: {weapons[user_weapon]}") 
-                print(f"Computer chose: {weapons[computer_weapon]}")
+                
             else:
                 break
         elif play == 2:
