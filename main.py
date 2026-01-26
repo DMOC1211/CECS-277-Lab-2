@@ -89,6 +89,12 @@ def main():
                 break
         elif play == 2:
             print("te", "st")
+            if find_winner = 1 
+                p_scores += 1 
+            if find_winner = 2 
+                c_scores += 1
+            if find_winner = 0 
+                return
         elif play == 3:
             playing = False
         else:
