@@ -56,7 +56,7 @@ def find_winner(p_wep, c_wep):
 def display_scores(p_scores, c_scores):
     print("Player: "+ p_scores)
     print('Computer: " + c_scores)
-        end
+    return
 
 
 
