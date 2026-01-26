@@ -71,12 +71,12 @@ score = 0
 def main():
     print("Welcome to Rock-Paper-Scissors!")
     playing = True
-    while playing():
+    while playing:
         print("1. Play game")
         print("2: Show score")
         print("3: Quit")
-        play = input()
-        if input ==1:
+        play = int(input())
+        if play == 1:
            while True:
             user_weapon = weapon_menu()
             if user_weapon != 0:
@@ -84,11 +84,11 @@ def main():
                 weapons = {1: "Rock", 2: "Paper", 3: "Scissors"}
                 print(f"You chose: {weapons[user_weapon]}") 
                 print(f"Computer chose: {weapons[computer_weapon]}")
+            else:
                 break
-        elif input == 2:
-            print("test")
-            
-        elif input == 3:
+        elif play == 2:
+            print("te", "st")
+        elif play == 3:
             playing = False
         else:
             print("Invalid choice. Please try again.")
