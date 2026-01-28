@@ -1,4 +1,3 @@
-
 #Lab 2: Functions
 
 #Authors: Jacob Miranda & Daniel Puerto
@@ -18,7 +17,7 @@ def weapon_menu():
     print("B: Back")
     weapon_u = input("Enter your choice (R/P/S/B): ").upper()
 
-    #For simplicity, 1 = Rock, 2 = Paper, 3 = Scissors
+    #For simplicity, returns a number value. 1 = Rock, 2 = Paper, 3 = Scissors
     if weapon_u == "R":
         print("You chose Rock")
         return 1
@@ -34,66 +33,80 @@ def weapon_menu():
         print("Invalid choice. Please try again.")
         return weapon_menu()
     
+#Gives the computer a random number coresponding to a weapon. Prints choice then returns the numerical value
 def comp_weapon():
-    return random.randint(1, 3)
+    comp_weap = random.randint(1, 3)
+    if comp_weap == 1:
+        print("Computer chose Rock")
+    elif comp_weap == 2:
+        print("Computer chose Paper")
+    elif comp_weap == 3:
+        print("Computer chose Scissors")
+    return comp_weap
 
+#finds the winner based on hard-coded matchups. Returns 0 for tie, 1 for player win, 2 for computer
 def find_winner(p_wep, c_wep): 
-    ## tie = 0,  player_win = 1, computer_win = 2
-    if p_wep = c_wep:
+
+    if p_wep == c_wep:
+        print("It's a tie!")
         return 0
     if p_wep == 1 and c_wep == 3:
+        print("Player wins")
         return 1
     if p_wep == 1 and c_wep == 2 :
+        print("Computer wins")
         return 2
     if p_wep == 3 and c_wep == 1 :
+        print("Computer wins")
         return 2
     if p_wep == 3 and c_wep == 2:
+        print("Player wins")
         return 1
     if p_wep == 2 and c_wep == 1:
+        print("Player wins")
         return 1
-    if p_wep = 3 and c_wep == 2:
+    if p_wep == 2 and c_wep == 3:
+        print("Computer wins")
         return 2
 
 
-
+#Function takes ijn player and computer scores from main and prints them
 def display_scores(p_scores, c_scores):
-    print("Player: "+ p_scores)
-    print('Computer: " + c_scores)
+    print("Player: "+ str(p_scores))
+    print("Computer: "+ str(c_scores))
     return
-
-
-
-score = 0 
-    if find_winner == 1 
-        score += 1
-    if find_winner == 2 
-        score -= 1
-    if find_winner == 0 
-        return
     
 def main():
     print("Welcome to Rock-Paper-Scissors!")
+    #Sets up the initial game state, as well as makes a while loop condition that can be changed later
     playing = True
+    p_score = 0
+    c_score = 0
     while playing:
         print("1. Play game")
         print("2: Show score")
         print("3: Quit")
-        play = int(input())
-        if play == 1:
+        play = str(input())
+
+        if play == "1":
            while True:
-            user_weapon = weapon_menu()
-            if user_weapon != 0:
-                computer_weapon = random.randint(1, 3)
-                if find_winner == 1 
-                    p_scores += 1 
-                if find_winner == 2 
-                    c_scores += 1
-                
-            else:
-                break
-        elif play == 2:
-            print("te", "st")
-        elif play == 3:
+                #Start of game loop. If user selects "B", they exit to main menu
+                #Otherwise, save user and computer weapon choices, determine winner, and update scores
+                #No update to scores on a tie. THis loop continues until user selects "B"
+                user_weapon = weapon_menu()
+                if user_weapon == 0:
+                    break
+                else:
+                    computer_weapon = comp_weapon()
+                    winner = find_winner(user_weapon, computer_weapon)
+                    if winner == 1: 
+                        p_score += 1 
+                    if winner == 2:
+                        c_score += 1 
+        elif play == "2":
+            display_scores(p_score, c_score)
+        elif play == "3":
+            #First while loop break condition
             playing = False
         else:
             print("Invalid choice. Please try again.")
